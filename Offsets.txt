@@ -1,14 +1,42 @@
 Please note these are strictly for my decompile (apk 1.7 linux) and will only be here for my referance's
 
 
+
 village:
++---------+---------------+
+| OFFSET  |    ACTUAL     |
++---------+---------------+
+|    17   |  mRadius      |
+|    14   |  mCenter.z    |
+|    15   |  mCenter.y    |
+|    16   |  mCenter.x    |
+|    35   | mGolemCount   |
+|    4    | DoorInfo      |
+|    56   | center        |
+|    7    | populationSize|
+|    19   | mGameTick     |
+|         |               |
+|         |               |
+|         |               |
+|         |               |
++---------+---------------+
+
+DoorInfo:
 +---------+------------+
 | OFFSET  |    ACTUAL  |
 +---------+------------+
-|    17   |  mRadius   |
-|    14   |  mCenter.z |
-|    15   |  mCenter.y |
-|    16   |  mCenter.x |
-|    35   | mGolemCount|
-|    4    | DoorInfo   |
+|    10   | timestamp  |
+|         |            |
+|         |            |
+|         |            |
+|         |            |
+|         |            |
+|         |            |
+|         |            |
+|         |            |
+|         |            |
 +---------+------------+
+
+
+
+
