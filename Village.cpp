@@ -96,3 +96,20 @@ bool Village::checkNeedMoreVillagers(Village * this) {
 }
 
 
+
+/**
+ * @brief legit a random method mainly just checking if it is as viable door based on its properties not its light levels on either side
+ */
+bool Village::isVillageDoor(Village * this, Level * level, const BlockPos * blockPos) {
+
+  Dimension * dimension = Level::getDimension(this, VanillaDimensions::Overworld); // Overworld = 0
+  if (!dimension) // !(0) = 1
+    return 0;
+  BlockSource * blockSource = Dimension::getBlockSourceDEPRECATEDUSEPLAYERREGIONINSTEAD(dimension);
+  Block * block = BlockSource::getBlock(blockSource, level);
+  int v7;
+  if (!Block::hasProperty(block, v7, 1024, 0)) /** @todo: unknown variable v7 and the Block code is shit can someone else do this thanks <3 **/
+    return 0;
+  return Material::isType(Block::getMaterial(block), 2);
+}
+
