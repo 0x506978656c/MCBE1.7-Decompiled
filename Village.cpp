@@ -72,3 +72,27 @@ int Village::countGolem(Village *this){
     this->mGolemCount = result; //mGolemCount
     return result;
 }
+
+
+/**
+ * @brief returns true or false if the parameters are met to expand the village population
+ *
+ */
+bool Village::checkNeedMoreVillagers(Village * this) {
+  if ( * (this -> mNoBreedTimer) && * (this -> mGameTick) - (this -> mNoBreedTimer) < 3600)
+    return false;
+
+  DoorInfo doorInfo = * (this -> mDoorInfo);
+  int populationSize = * (this -> mPopulationSize);
+  bool result = false;
+  /**
+   * @note: the windows 1.6 of this method includes an unknown filed `filed_0x8`
+   * for this I have deduced that it has to be some sort of count value or struct of `mDoorInfos` that returns an integer value of the number of doors 
+   *     original  windows 1.7: `&(this->mDoorInfos).field_0x8 - &this->mDoorInfos >> 3)`
+   * @TODO: find the actual name not just `pCount`
+   */
+  int dCount = (doorInfo.pCount - doorInfo >> 2);
+  return v4 < (dCount <= 3 ? 3 : dCount);
+}
+
+
