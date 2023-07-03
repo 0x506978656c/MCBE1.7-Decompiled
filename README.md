@@ -1,7 +1,6 @@
 # MCBE1.7-Decompiled
-This is just a random clump of decompiled code from code digging produced from a bunch of various versions around 1.6 and 1.7 but I wanted to keep them all together easily 
-
-Update: I'm back and this code is really bad so there's going to be only new code from stuff 
+This is legit gonna be a dumping ground for all my code from this and random decom projects. Pls don't think this is going to be good lol.
+If you want to contribute just create a folder with your name and push it I will auto accept.  
 
 # Note
 
